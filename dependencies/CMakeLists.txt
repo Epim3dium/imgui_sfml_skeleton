@@ -1,6 +1,6 @@
 include(FetchContent)
 
-set(SFML_VERSION 2.5.1)
+set(SFML_VERSION 2.6.x)
 set(IMGUI_VERSION 1.87)
 # set(IMGUI_SFML_VERSION 2.3)
 
@@ -33,11 +33,7 @@ FetchContent_Declare(
 # SFML
 
 # Dear ImGui
-FetchContent_GetProperties(sfml)
-if(NOT sfml_POPULATED)
-    FetchContent_Populate(sfml)
-    add_subdirectory(${sfml_SOURCE_DIR} ${sfml_BINARY_DIR})
-endif()
+FetchContent_MakeAvailable(sfml)
 
 FetchContent_MakeAvailable(imgui)
 
@@ -49,3 +45,4 @@ option(IMGUI_SFML_IMGUI_DEMO "Build imgui_demo.cpp" ON)
 FetchContent_MakeAvailable(imgui-sfml)
 
 set_target_properties(sfml-graphics sfml-audio sfml-system PROPERTIES CXX_STANDARD 98 CXX_STANDARD_REQUIRED YES CXX_EXTENSIONS NO)
+

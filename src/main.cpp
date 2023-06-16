@@ -10,6 +10,7 @@
 #include <iostream>
 
 int main() {
+    sf::Sound sound;
     sf::RenderWindow window(sf::VideoMode(1280, 720), "ImGuiSFMLDemo");
     ImGui::SFML::Init(window);
     ImGui::GetIO().FontGlobalScale = 2.f;

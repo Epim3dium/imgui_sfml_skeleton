@@ -7,6 +7,9 @@ target_compile_options(sfml-system PRIVATE   -w)
 target_link_libraries(imgui-sfml-example
     PUBLIC
     ImGui-SFML::ImGui-SFML
+    sfml-system
+    sfml-audio
+    sfml-graphics
 )
 
 include(GNUInstallDirs)

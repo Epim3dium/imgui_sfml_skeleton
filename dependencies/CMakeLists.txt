@@ -2,7 +2,7 @@ include(FetchContent)
 
 set(SFML_VERSION 2.6.x)
 set(IMGUI_VERSION v1.89)
-set(IMGUI_SFML_VERSION v2.5)
+set(IMGUI_SFML_VERSION v2.3)
 
 FetchContent_Declare(
     sfml
@@ -19,7 +19,7 @@ FetchContent_Declare(
 FetchContent_Declare(
     imgui-sfml
     GIT_REPOSITORY "https://github.com/SFML/imgui-sfml.git"
-    GIT_TAG        "${IMGUI_SFML_VERSION}"
+    #GIT_TAG        "${IMGUI_SFML_VERSION}"
     # GIT_COMMIT 5f54b69b6aee18db846c81633f86f78c2586dded
     # ^ or like this - sometimes it's better because FetchContent won't look
     # into remote to see if branch head was updated or not - good for stable
